@@ -1,0 +1,37 @@
+package homework;
+
+import java.util.Scanner;
+
+public class Homework822 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Enter the first number: ");
+		double num1 = scanner.nextDouble();
+
+		System.out.print("Enter the second number: ");
+		double num2 = scanner.nextDouble();
+
+		double epsilon2 = 0.01; // Приблизително 2 знака след запетаята
+		double epsilon3 = 0.001; // Приблизително 3 знака след запетаята
+		double epsilon4 = 0.0001; // Приблизително 4 знака след запетаята
+		boolean areEqualTo2 = Math.abs(num1 - num2) < epsilon2;
+		boolean areEqualTo3 = Math.abs(num1 - num2) < epsilon3;
+		boolean areEqualTo4 = Math.abs(num1 - num2) < epsilon4;
+
+		
+
+		
+		
+		if (areEqualTo4) {
+			System.out.println("The numbers equal up to 4 decimal  ");
+		} else if (areEqualTo3) {
+			System.out.println("The numbers equal up to 3 decimal");
+		} else if (areEqualTo2) {
+			System.out.println("The numbers equal up to 2 decimal");
+		} else {
+			System.out.println("The numbers are NOT equal");
+		}
+		scanner.close();
+	}
+}
